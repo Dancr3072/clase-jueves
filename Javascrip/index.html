@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span id="respuesta"> </span>
+
+    <script>
+
+        // let num_letra1 = prompt ("ingrese el primer numero: ");
+        // let num_letra2 = prompt ("ingrese el segundo numero: ");    
+
+        // let num1 = parseInt (num_letra1)
+        // let num2 = parseInt (num_letra2)
+
+        // let resultado = num1 + num2
+
+        // console.log("el resultado es", resultado)
+
+        //tabla del 8
+
+        // for (let m = 1; m <= 10; m++ ) {
+        
+        // let j= 8
+
+        // console.log(m*j);
+
+
+        // }
+
+        // Solicitar un numero al usuario,imprimir en la consola los nuemros impares desde en 1 hasta el numero ingresado por el usuario
+
+        //let numero1 = parseInt (prompt ("ingrese un numero: "));
+                      
+        //for (let x = 1; x <= numero1; x++){
+
+            //if ( x % 2 !== 0) {
+                                
+            //}
+            
+        //} 
+
+        //document.write("los numeros impares son:" + x );
+        //console.log("los numeros impares son:" + x );
+
+// Solicitar 10 numeros al usuario, indicar cuantos son pares y cuantos impares 
+
+let pares = 0;
+let impares = 0;
+
+for (let x = 1; x <= 10; x++) {
+  let numero = parseInt(prompt("Ingresa el número " + x + ":"));
+
+  if (numero % 2 === 0) {
+    pares++;
+  } else {
+    impares++;
+  }
+}
+
+//document.write("Cantidad de números pares: " + pares + "<br>");
+//document.write("Cantidad de números impares: " + impares);
+
+console.log("Cantidad de números pares: " + pares + " ");
+console.log("Cantidad de números impares: " + impares);
+
+//document.getElementById("respuesta").innerHTML = "El resultado es:" + resultado; 
+
+</script>
+    
+</body>
+</html>

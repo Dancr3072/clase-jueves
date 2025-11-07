@@ -1,0 +1,74 @@
+body{
+    background-color: white;
+}
+
+.pagina{
+    text-align: center;
+
+}
+
+.contenedor-principal{
+
+    background-color: white;
+    border: 1px solid gray;
+    padding: 5px 10px 5px 10px;
+    margin: 1%;
+    border-radius: 10px;
+}
+.contenedor2{
+    display: flex;
+   
+}
+
+.nombre{
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: red;
+}
+
+.profecion{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+
+}
+
+.titulo2{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.titulo3{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    
+}
+
+.texto1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.primer-lista, .segunda-lista{
+    
+    margin: 5px 10px 5px 10px;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px 5px 10px;
+    
+}
+
+
+img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+
+}
+

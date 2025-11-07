@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contacto.css">
+    <title>contacto</title>
+</head>
+<body>
+    <nav class="Formulrio">
+        <ul>
+            <li><a href="index.html"></a></li>
+            <li><a href="contacto.html"></a></li>
+            
+        </ul>
+
+    </nav>
+
+    <div class="formulario">
+        <form action="" method="post">
+            <label for="textinput">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+
+            <input type="email" name="email" id="email" placeholder="ingrese su correo">
+
+            <input type="password" name="password" id="password">
+
+            <input type="range" name="rangeInput" id="rangeInpu" min="0" max="120" step="5" value="10">
+
+            <div class="input-info">valor actual: <span id="rangeValue">50</span></div>
+            <br>
+              <input type="range" name="rangeInput" id="rangeInput" min="0" max="120" step="5" value="10">
+
+            <div class="input-info">valor actual: <span id="rangeValue">50</span></div>
+
+<br>
+        
+            <label for="">Item 1 check box</label>
+            <input type="checkbox" name="" id="">
+
+<br>
+
+            <label for="">Item 2 check box</label>
+            <input type="checkbox" name="" id="">
+
+<br>
+
+            <label for="">Item 1 radio</label>
+            <input type="radio" name="grupo1" id="">
+
+<br>
+
+            <label for="">Item 2 radio</label>
+            <input type="radio" name="grupo1" id="">
+
+<br>
+
+             <label for="">Item 3 radio</label>
+            <input type="radio" name="grupo2" id="">
+
+<br>            
+
+ <label for="">adjuntar archivo</label>
+<input type="file" name="" id="">
+
+<br>
+
+ <label for="">Area de texto</label>
+<textarea name="" id="" rows="10"></textarea>
+
+<br>
+
+<label for="">Lista desplegable</label>
+<select name="" id=""></select>
+
+
+    <button type="reset">Resetear</button>
+        <button type="submit">Enviar</button>
+
+        </form>
+
+        <script>
+            const rangeInput = document.getElementByid('rangeInput');
+            const rangeValue = document.getElementByid('rangeValue');
+
+            rangeInput.addEventListener('input',function()
+            {
+                rangeValue.textContent = this.value;
+
+            });
+
+        </script>
+
+    </div>
+</body>
+</html>
