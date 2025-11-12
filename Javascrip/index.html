@@ -49,27 +49,68 @@
 
 // Solicitar 10 numeros al usuario, indicar cuantos son pares y cuantos impares 
 
-let pares = 0;
-let impares = 0;
+//let pares = 0;
+//let impares = 0;
 
-for (let x = 1; x <= 10; x++) {
-  let numero = parseInt(prompt("Ingresa el número " + x + ":"));
+//for (let x = 1; x <= 10; x++) {
+//  let numero = parseInt(prompt("Ingresa el número " + x + ":"));
 
-  if (numero % 2 === 0) {
-    pares++;
-  } else {
-    impares++;
-  }
-}
+//  if (numero % 2 === 0) {
+//    pares++;
+//  } else {
+//    impares++;
+//  }
+//}
 
 //document.write("Cantidad de números pares: " + pares + "<br>");
 //document.write("Cantidad de números impares: " + impares);
 
-console.log("Cantidad de números pares: " + pares + " ");
-console.log("Cantidad de números impares: " + impares);
+//console.log("Cantidad de números pares: " + pares + " ");
+//console.log("Cantidad de números impares: " + impares);
 
-//document.getElementById("respuesta").innerHTML = "El resultado es:" + resultado; 
+//Solicitar al usuario ingresar numeros aleatorios, imdicar si el numero ingresado es mayor o menor al anterior, al digitar el numero 0 el programa finaliza 
+    
+  let num1 = null; 
+  let num2 = parseInt(prompt("ingrese un numero: "));
+  
+ 
+  while (num2 !== 0){
 
+      if (num1 === null){
+    
+  console.log("El numero ingresado es: " + num2);
+  //document.write ("El numero ingresado es: " + num2);
+  
+      }else {
+
+        if (num2 < num1){
+        console.log("el numero " +  num1 + " es mayor que " + num2 );
+        //document.write("el numero " +  num1 + " es mayor que " + num2 );
+            
+      } else if (num2 > num1){  
+        console.log("el numero " +  num1 + " es menor que " + num2);
+        //document.write("el numero " +  num1 + " es menor que " + num2)
+      } else {
+        console.log("el numero " +  num1 + " es igual que " + num2)
+        //document.write("el numero " +  num1 + " es igual que " + num2)
+      } 
+
+      }
+
+    
+
+    num1 = num2;
+   
+    num2 = parseInt(prompt("ingrese otro numero o digite 0 para terminar"));
+
+  }
+
+  if(num2 === 0){
+
+  console.log("Programa terminado")
+    //document.write("Programa terminado")
+  }
+   
 </script>
     
 </body>
