@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Matriz</title>
+</head>
+<body>
+
+    <h2>Matriz</h2>
+
+    <label>Primer número:</label>
+    <input type="number" id="num1">
+
+    <label>Segundo número:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="guardarResultado()">Calcular y Guardar</button>
+
+    <h3>Resultado multiplicado:</h3>
+    <p id="resultado"></p>
+
+    <h3>TABLA:</h3>
+    <table border="1" id="tablaMatriz" style="border-collapse: collapse; width: 200px; text-align: center;">
+    </table>
+
+    <script>
+        // Matriz 3x2
+        let matriz = [
+            [0, 0],
+            [0, 0],
+            [0, 0]
+        ];
+
+        let filaActual = 0;
+        let colActual = 0;
+
+        // Función para dibujar la tabla en HTML
+        function actualizarTabla() {
+            let tabla = document.getElementById("tablaMatriz");
+            tabla.innerHTML = ""; // Limpia la tabla
+
+            for (let i = 0; i < 3; i++) {
+                let fila = document.createElement("tr");
+                for (let j = 0; j < 2; j++) {
+                    let celda = document.createElement("td");
+                    celda.textContent = matriz[i][j];
+                    fila.appendChild(celda);
+                }
+                tabla.appendChild(fila);
+            }
+        }
+
+        // Función para guardar el resultado
+        function guardarResultado() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+
+            let resultado = num1 * num2;
+
+            // Guardar el resultado en la matriz
+            matriz[filaActual][colActual] = resultado;
+
+            // Mostrar el resultado en pantalla
+            document.getElementById("resultado").textContent =
+                "Resultado: " + resultado;
+
+            // Actualizar la tabla
+            actualizarTabla();
+
+            // Avanzar casilla automáticamente
+            colActual++;
+
+            // Si llega al final de columnas, pasa a la siguiente fila
+            if (colActual === 2) {
+                colActual = 0;
+                filaActual++;
+            }
+
+            // Si llegó al final de la matriz → reiniciar
+            if (filaActual === 3) {
+                filaActual = 0;
+                colActual = 0;
+
+                // Reiniciar matriz a ceros
+                matriz = [
+                    [0, 0],
+                    [0, 0],
+                    [0, 0]
+                ];
+            }
+        }
+
+        // Mostrar matriz inicial
+        actualizarTabla();
+    </script>
+
+</body>
+</html>
