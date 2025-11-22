@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calificacion</title>
+</head>
+<body>
+    
+<!-- En un vector de 5 posiciones se requiere un programa que permita almacenar 4 calificaciones, se debe almacenar y mostrar el promedio en la quinta posicion. luego imprimir la calificacion mas alta y la mas baja. -->
+
+   <h2>Ingresar calificaciones</h2>
+
+<input type="number" id="c1" placeholder="Calificación 1"><br><br>
+<input type="number" id="c2" placeholder="Calificación 2"><br><br>
+<input type="number" id="c3" placeholder="Calificación 3"><br><br>
+<input type="number" id="c4" placeholder="Calificación 4"><br><br>
+
+<button onclick="procesar()">Procesar</button>
+
+<h3>Resultados:</h3>
+<p id="resultado"></p>
+
+<script>
+    
+function procesar() {
+    // Crear vector de 5 posiciones
+    let notas = new Array(5);
+
+    // Guardar las primeras 4 calificaciones
+    notas[0] = parseFloat(document.getElementById("c1").value);
+    notas[1] = parseFloat(document.getElementById("c2").value);
+    notas[2] = parseFloat(document.getElementById("c3").value);
+    notas[3] = parseFloat(document.getElementById("c4").value);
+
+    // Calcular promedio
+    let suma = notas[0] + notas[1] + notas[2] + notas[3];
+    let promedio = suma / 4;
+
+    // Guardar promedio en la posición 5
+    notas[4] = promedio;
+
+    // Calcular mayor y menor
+    let mayor = Math.max(notas[0], notas[1], notas[2], notas[3]);
+    let menor = Math.min(notas[0], notas[1], notas[2], notas[3]);
+
+    // Mostrar resultados
+    document.getElementById("resultado").innerHTML =
+        
+        "Promedio : " + promedio.toFixed(2) + "<br>" + 
+
+        "Calificación más alta: " + mayor + "<br>" + 
+
+        "Calificación más baja: " + menor;
+}
+</script>
+
+</body>
+</html>

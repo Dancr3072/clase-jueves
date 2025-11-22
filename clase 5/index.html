@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="mensaje1">Hola mundo</p>
+<!-- Cambio dinamico de texto -->
+
+<button onclick="cambiartexto()">Cambio texto</button>
+
+<script>
+  
+  function cambiartexto(){
+  const parrafo = document.getElementById("mensaje1");
+  parrafo.innerText = "Còmo podemos cambiar el mundo";
+  }
+
+</script>  
+
+<br>
+
+<!-- Cambio de estilos -->
+
+<p id="mensaje2">Hola mundo</p>
+
+<button onclick="cambiocolor()">Cambio</button>
+
+<script>
+
+// El color de la letra debe quedar en rojo y tamaño 20px-->
+  function cambiocolor() {
+  const texto = document.getElementById("mensaje2");
+  texto.style.color = "red";
+  texto.style.fontSize = "20px";
+  }  
+
+</script>  
+
+<br>
+
+<!-- Crear un nuevo elemento -->
+<div id="contenedor"></div>
+
+<button onclick="crear()">Crear</button>
+
+<script>
+
+  function crear(){  
+  const contenedor = document.getElementById("contenedor");
+  const nuevoElemento = document.createElement("p");
+  nuevoElemento.innerText = "Soy un párrafo nuevo"; 
+  contenedor.appendChild(nuevoElemento);
+  }
+
+</script>
+
+<br>
+
+<!-- Elimina un elemento --> 
+<p id="mensaje3">Hola mundo</p>
+
+<button onclick="eliminar()">Eliminar</button>
+
+<!-- Creae un boton que elimine el contenido de la etiqueta con id mensaje 3-->
+
+<script>
+  
+  function eliminar(){
+  let tex2 = document.getElementById("mensaje3");
+  tex2.remove(); // Elimina el párrafo
+  }  
+
+</script>
+
+<br>
+
+<!-- Escuchar un evento -->
+ <button id="boton">Haz clic</button>
+
+<script>
+  let boton = document.getElementById("boton");
+  boton.addEventListener("click", () => {
+    alert("¡Botón presionado!");
+  });
+
+</script>
+
+
+</body>
+</html>
