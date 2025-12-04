@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span id="respuesta"> </span>
+
+    <script>
+
+        // let num_letra1 = prompt ("ingrese el primer numero: ");
+        // let num_letra2 = prompt ("ingrese el segundo numero: ");    
+
+        // let num1 = parseInt (num_letra1)
+        // let num2 = parseInt (num_letra2)
+
+        // let resultado = num1 + num2
+
+        // console.log("el resultado es", resultado)
+
+        //tabla del 8
+
+        // for (let m = 1; m <= 10; m++ ) {
+        
+        // let j= 8
+
+        // console.log(m*j);
+
+
+        // }
+
+        // Solicitar un numero al usuario,imprimir en la consola los nuemros impares desde en 1 hasta el numero ingresado por el usuario
+
+        //let numero1 = parseInt (prompt ("ingrese un numero: "));
+                      
+        //for (let x = 1; x <= numero1; x++){
+
+            //if ( x % 2 !== 0) {
+                                
+            //}
+            
+        //} 
+
+        //document.write("los numeros impares son:" + x );
+        //console.log("los numeros impares son:" + x );
+
+// Solicitar 10 numeros al usuario, indicar cuantos son pares y cuantos impares 
+
+//let pares = 0;
+//let impares = 0;
+
+//for (let x = 1; x <= 10; x++) {
+//  let numero = parseInt(prompt("Ingresa el número " + x + ":"));
+
+//  if (numero % 2 === 0) {
+//    pares++;
+//  } else {
+//    impares++;
+//  }
+//}
+
+//document.write("Cantidad de números pares: " + pares + "<br>");
+//document.write("Cantidad de números impares: " + impares);
+
+//console.log("Cantidad de números pares: " + pares + " ");
+//console.log("Cantidad de números impares: " + impares);
+
+//Solicitar al usuario ingresar numeros aleatorios, imdicar si el numero ingresado es mayor o menor al anterior, al digitar el numero 0 el programa finaliza 
+    
+  let num1 = null; 
+  let num2 = parseInt(prompt("ingrese un numero: "));
+  
+ 
+  while (num2 !== 0){
+
+      if (num1 === null){
+    
+  console.log("El numero ingresado es: " + num2);
+  //document.write ("El numero ingresado es: " + num2);
+  
+      }else {
+
+        if (num2 < num1){
+        console.log("el numero " +  num1 + " es mayor que " + num2 );
+        //document.write("el numero " +  num1 + " es mayor que " + num2 );
+            
+      } else if (num2 > num1){  
+        console.log("el numero " +  num1 + " es menor que " + num2);
+        //document.write("el numero " +  num1 + " es menor que " + num2)
+      } else {
+        console.log("el numero " +  num1 + " es igual que " + num2)
+        //document.write("el numero " +  num1 + " es igual que " + num2)
+      } 
+
+      }
+
+    
+
+    num1 = num2;
+   
+    num2 = parseInt(prompt("ingrese otro numero o digite 0 para terminar"));
+
+  }
+
+  if(num2 === 0){
+
+  console.log("Programa terminado")
+    //document.write("Programa terminado")
+  }
+   
+</script>
+    
+</body>
+</html>

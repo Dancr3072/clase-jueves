@@ -1,0 +1,9 @@
+let saldo = 10000
+
+while (saldo >= 3200)
+{
+    console.log("ingreso exitoso");
+       
+}
+
+
